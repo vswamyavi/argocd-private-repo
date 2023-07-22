@@ -4,12 +4,13 @@ metada:
   labels:
     app: hello-app
   name: hello-app-service
+  namespace: default
 spec:
-  selector:
-    app: hello-app
   ports:
-  - protocol: "TCP"
+  - protocol: TCP
     port: 6000
     targetPort: 5000
+  selector:
+    app: hello-app
   type: NodePort
 
